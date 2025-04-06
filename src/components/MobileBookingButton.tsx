@@ -18,7 +18,11 @@ const MobileBookingButton = () => {
       }
 
       // Hide on scroll down, show on scroll up
-      setIsVisible(lastScrollY > window.scrollY);
+      if (window.scrollY > lastScrollY) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
       setLastScrollY(window.scrollY);
     };
 
@@ -28,8 +32,8 @@ const MobileBookingButton = () => {
 
   return (
     <div 
-      className={`md:hidden fixed bottom-6 left-0 right-0 z-50 px-4 transition-transform duration-300 ${
-        isVisible ? "translate-y-0" : "translate-y-full"
+      className={`md:hidden fixed bottom-6 left-0 right-0 z-50 px-4 transition-opacity duration-300 ${
+        isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
       <Button 
