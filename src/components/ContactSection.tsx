@@ -5,11 +5,11 @@ import { MapPin, Clock, Phone, Mail, Calendar } from "lucide-react";
 const ContactItem = ({ icon: Icon, title, children }) => {
   return (
     <div className="flex items-start gap-4">
-      <div className="bg-white p-3 rounded-lg shadow-md text-brand-500">
+      <div className="bg-white p-3 rounded-lg shadow-md text-comunicar-lavender">
         <Icon size={20} />
       </div>
       <div>
-        <h3 className="font-medium text-lg">{title}</h3>
+        <h3 className="font-medium text-lg text-gray-800">{title}</h3>
         <div className="text-muted-foreground">{children}</div>
       </div>
     </div>
@@ -19,53 +19,53 @@ const ContactItem = ({ icon: Icon, title, children }) => {
 const ContactForm = () => {
   return (
     <form className="bg-white p-6 rounded-2xl shadow-lg">
-      <h3 className="text-2xl font-bold mb-6 text-center" id="agendar">Agenda tu primera consulta</h3>
+      <h3 className="text-2xl font-bold mb-6 text-center text-gray-800" id="agendar">Agenda tu primera consulta</h3>
       
       <div className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium mb-1">
+            <label htmlFor="name" className="block text-sm font-medium mb-1 text-gray-700">
               Nombre
             </label>
             <input
               type="text"
               id="name"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-comunicar-lavender focus:border-comunicar-lavender transition-colors"
               placeholder="Tu nombre"
             />
           </div>
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium mb-1">
+            <label htmlFor="phone" className="block text-sm font-medium mb-1 text-gray-700">
               Teléfono
             </label>
             <input
               type="tel"
               id="phone"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-comunicar-lavender focus:border-comunicar-lavender transition-colors"
               placeholder="+56 9 1234 5678"
             />
           </div>
         </div>
         
         <div>
-          <label htmlFor="email" className="block text-sm font-medium mb-1">
+          <label htmlFor="email" className="block text-sm font-medium mb-1 text-gray-700">
             Email
           </label>
           <input
             type="email"
             id="email"
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-comunicar-lavender focus:border-comunicar-lavender transition-colors"
             placeholder="tu@email.com"
           />
         </div>
         
         <div>
-          <label htmlFor="service" className="block text-sm font-medium mb-1">
+          <label htmlFor="service" className="block text-sm font-medium mb-1 text-gray-700">
             Servicio
           </label>
           <select
             id="service"
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-comunicar-lavender focus:border-comunicar-lavender transition-colors"
           >
             <option value="">Selecciona un servicio</option>
             <option value="fono">Fonoaudiología</option>
@@ -76,13 +76,13 @@ const ContactForm = () => {
         </div>
         
         <div>
-          <label htmlFor="message" className="block text-sm font-medium mb-1">
+          <label htmlFor="message" className="block text-sm font-medium mb-1 text-gray-700">
             Mensaje (opcional)
           </label>
           <textarea
             id="message"
             rows={4}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-comunicar-lavender focus:border-comunicar-lavender transition-colors"
             placeholder="Cuéntanos brevemente sobre tu hijo/a"
           ></textarea>
         </div>
@@ -102,14 +102,14 @@ const ContactForm = () => {
 const ContactSection = () => {
   return (
     <section id="contacto" className="relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-brand-100 rounded-full blur-3xl opacity-20 transform translate-x-1/4 -translate-y-1/4"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-comunicar-lavender/20 rounded-full blur-3xl opacity-20 transform translate-x-1/4 -translate-y-1/4"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="section-title">Estamos cerca de ti</h2>
         
         <div className="grid md:grid-cols-2 gap-12 mt-12">
           <div>
-            <div className="bg-brand-50 p-8 rounded-2xl shadow-lg mb-8">
+            <div className="bg-comunicar-lavender/10 p-8 rounded-2xl shadow-lg mb-8">
               <div className="space-y-6">
                 <ContactItem icon={MapPin} title="Dirección">
                   <p>Av. Los Alerces 1234, Ñuñoa</p>
@@ -135,7 +135,7 @@ const ContactSection = () => {
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
-                allowFullScreen=""
+                allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Mapa de ubicación"

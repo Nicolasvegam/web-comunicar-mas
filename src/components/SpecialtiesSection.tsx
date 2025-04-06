@@ -10,8 +10,8 @@ const specialties = [
     title: "Fonoaudiología",
     description:
       "Desarrollo del lenguaje, habla y deglución. Ayudamos a mejorar la comunicación y expresión de tu hijo.",
-    bgColor: "bg-comunicar-blue/20",
-    iconColor: "text-comunicar-blue",
+    bgColor: "bg-comunicar-blue/25", // Slightly darker background
+    iconColor: "text-comunicar-blue font-bold", // Added font-bold
   },
   {
     id: 2,
@@ -19,8 +19,8 @@ const specialties = [
     title: "Terapia Ocupacional",
     description:
       "Motricidad, integración sensorial y autonomía. Potenciamos las habilidades físicas y la independencia.",
-    bgColor: "bg-comunicar-lavender/20",
-    iconColor: "text-comunicar-lavender",
+    bgColor: "bg-comunicar-lavender/25", // Slightly darker background
+    iconColor: "text-comunicar-lavender font-bold", // Added font-bold
   },
   {
     id: 3,
@@ -28,8 +28,8 @@ const specialties = [
     title: "Psicología Infantil",
     description:
       "Regulación emocional, conducta y acompañamiento familiar. Cuidamos la salud mental y el desarrollo emocional.",
-    bgColor: "bg-comunicar-yellow/20",
-    iconColor: "text-comunicar-yellow",
+    bgColor: "bg-comunicar-yellow/25", // Slightly darker background
+    iconColor: "text-comunicar-yellow font-bold", // Added font-bold
   },
 ];
 
@@ -61,7 +61,7 @@ const SpecialtyCard = ({
       >
         <Icon size={24} />
       </div>
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <h3 className="text-xl font-bold mb-2 text-gray-800">{title}</h3>
       <p className="text-muted-foreground">{description}</p>
     </div>
   );
@@ -73,7 +73,7 @@ const SpecialtiesSection = () => {
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-comunicar-lavender rounded-full blur-3xl opacity-20 transform translate-x-1/4 -translate-y-1/4"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="section-title">Especialidades para cada etapa del desarrollo</h2>
+        <h2 className="section-title text-gray-800">Especialidades para cada etapa del desarrollo</h2>
         <p className="section-subtitle">
           Nuestro equipo atiende de forma personalizada y coordinada las siguientes áreas:
         </p>
