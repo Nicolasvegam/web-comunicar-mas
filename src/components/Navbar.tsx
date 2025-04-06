@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,9 +69,14 @@ const Navbar = () => {
           ))}
         </div>
 
-        <a href="#agendar" className="hidden md:block btn-primary">
-          Agendar Cita
-        </a>
+        <Button 
+          asChild 
+          variant="default" 
+          size="lg" 
+          className="hidden md:flex"
+        >
+          <a href="#agendar">Agendar Cita</a>
+        </Button>
 
         {/* Mobile Menu Button */}
         <button
@@ -98,13 +104,6 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <a
-            href="#agendar"
-            className="btn-primary text-center"
-            onClick={() => setIsOpen(false)}
-          >
-            Agendar Cita
-          </a>
         </div>
       </div>
     </nav>

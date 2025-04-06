@@ -9,6 +9,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import FaqSection from "@/components/FaqSection";
 import Footer from "@/components/Footer";
+import MobileBookingButton from "@/components/MobileBookingButton";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
         <FaqSection />
       </main>
       <Footer />
+      <MobileBookingButton />
     </div>
   );
 };
