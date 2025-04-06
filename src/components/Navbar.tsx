@@ -55,7 +55,7 @@ const Navbar = () => {
       <div className="hidden md:flex container mx-auto px-4 justify-between items-center py-4">
         <a href="#" className="flex items-center">
           <img 
-            src="/public/lovable-uploads/2867f809-d36c-45f2-9dc2-2e47c39908e4.png" 
+            src="/lovable-uploads/2867f809-d36c-45f2-9dc2-2e47c39908e4.png" 
             alt="Comunicar Más Logo" 
             className="h-12 w-auto"
           />
@@ -93,7 +93,7 @@ const Navbar = () => {
       <div className="md:hidden flex container mx-auto px-4 justify-between items-center py-4">
         <a href="#" className="flex items-center">
           <img 
-            src="/public/lovable-uploads/2867f809-d36c-45f2-9dc2-2e47c39908e4.png" 
+            src="/lovable-uploads/2867f809-d36c-45f2-9dc2-2e47c39908e4.png" 
             alt="Comunicar Más Logo" 
             className="h-10 w-auto"
           />
