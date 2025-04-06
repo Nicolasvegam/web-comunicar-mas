@@ -1,4 +1,3 @@
-
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -10,18 +9,18 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-comunicar-lavender text-white hover:bg-comunicar-lavender/90 shadow-md", // Increased contrast and added shadow
+        default: "bg-comunicar-lavender/100 text-white hover:bg-[#9c89c9] shadow-md", // Much darker color for contrast
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-md", // Added shadow
+          "bg-destructive text-destructive-foreground hover:bg-destructive/100 shadow-md", // Full opacity hover
         outline:
-          "border-2 border-comunicar-lavender bg-background text-comunicar-lavender hover:bg-comunicar-lavender/10 hover:text-comunicar-lavender", // Thicker border and hover effect
+          "border-2 border-comunicar-lavender bg-background text-comunicar-lavender hover:bg-comunicar-lavender/30 hover:text-comunicar-lavender", // More noticeable hover
         secondary:
-          "bg-comunicar-blue text-white hover:bg-comunicar-blue/80 shadow-md", // Changed to blue and added shadow
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-comunicar-lavender underline-offset-4 font-semibold hover:underline", // Made text bolder
+          "bg-[#7c9dcf] text-white hover:bg-[#5c7db0] shadow-md", // Completely different blue shade
+        ghost: "hover:bg-accent/90 hover:text-accent-foreground", // Stronger hover
+        link: "text-[#8d6eb3] underline-offset-4 font-semibold hover:underline hover:text-[#6d4e93]", // Much darker colors
       },
       size: {
-        default: "h-10 px-5 py-2.5", // Slightly larger padding
+        default: "h-10 px-5 py-2.5",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8 py-3", // Added vertical padding
         icon: "h-10 w-10",

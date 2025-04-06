@@ -1,6 +1,5 @@
-
 import React from "react";
-import { Facebook, Instagram, Twitter, Mail } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -30,29 +29,17 @@ const Footer = () => {
             
             <div className="flex space-x-4">
               <a
-                href="#"
-                className="bg-white p-2 rounded-full shadow-md text-comunicar-lavender hover:bg-comunicar-lavender/10 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="#"
-                className="bg-white p-2 rounded-full shadow-md text-comunicar-blue hover:bg-comunicar-blue/10 transition-colors"
+                href="https://www.instagram.com/comunicarmas.cl/"
+                className="bg-[#6d4e93] p-2 rounded-full shadow-md text-white hover:bg-[#5a3b80] transition-colors"
                 aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Instagram size={20} />
               </a>
               <a
-                href="#"
-                className="bg-white p-2 rounded-full shadow-md text-comunicar-yellow hover:bg-comunicar-yellow/10 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </a>
-              <a
-                href="mailto:contacto@comunicarmas.cl"
-                className="bg-white p-2 rounded-full shadow-md text-comunicar-pink hover:bg-comunicar-pink/10 transition-colors"
+                href="mailto:comunicarmascl@gmail.com"
+                className="bg-[#d85c85] p-2 rounded-full shadow-md text-white hover:bg-[#c04c75] transition-colors"
                 aria-label="Email"
               >
                 <Mail size={20} />
@@ -101,8 +88,8 @@ const Footer = () => {
                 +56 9 1234 5678
               </li>
               <li>
-                <a href="mailto:contacto@comunicarmas.cl" className="text-muted-foreground hover:text-comunicar-lavender transition-colors">
-                  contacto@comunicarmas.cl
+                <a href="mailto:comunicarmascl@gmail.com" className="text-muted-foreground hover:text-comunicar-lavender transition-colors">
+                  comunicarmascl@gmail.com
                 </a>
               </li>
               <li className="text-muted-foreground">

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -18,11 +17,20 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Add effect to prevent scrolling when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   const navLinks = [
     { name: "Inicio", href: "#inicio" },
@@ -38,26 +46,28 @@ const Navbar = () => {
     <nav
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm"
+        isScrolled || isOpen
+          ? "bg-white shadow-sm"
           : "bg-transparent"
       )}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center py-4">
-        <a href="#" className="flex items-center space-x-2">
+      {/* Desktop Navbar - Hidden on mobile */}
+      <div className="hidden md:flex container mx-auto px-4 justify-between items-center py-4">
+        <a href="#" className="flex items-center">
           <img 
             src="/public/lovable-uploads/2867f809-d36c-45f2-9dc2-2e47c39908e4.png" 
             alt="Comunicar Más Logo" 
             className="h-12 w-auto"
           />
-          <span className="text-xl font-display font-semibold md:block hidden">
-            <span className="text-comunicar-lavender">Comunicar</span>{" "}
-            <span className="text-comunicar-blue">Más</span>
-          </span>
+          <div className="ml-2">
+            <span className="text-xl font-display font-semibold">
+              <span className="text-comunicar-lavender">Comunicar</span>{" "}
+              <span className="text-comunicar-blue">Más</span>
+            </span>
+          </div>
         </a>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6">
+        <div className="flex space-x-6">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -73,24 +83,34 @@ const Navbar = () => {
           asChild 
           variant="default" 
           size="lg" 
-          className="hidden md:flex"
+          className="bg-[#7d6aa9] hover:bg-[#5a4b8a] text-white shadow-md"
         >
           <a href="#agendar">Agendar Cita</a>
         </Button>
+      </div>
 
-        {/* Mobile Menu Button */}
+      {/* Mobile Navbar - Only logo and menu button */}
+      <div className="md:hidden flex container mx-auto px-4 justify-between items-center py-4">
+        <a href="#" className="flex items-center">
+          <img 
+            src="/public/lovable-uploads/2867f809-d36c-45f2-9dc2-2e47c39908e4.png" 
+            alt="Comunicar Más Logo" 
+            className="h-10 w-auto"
+          />
+        </a>
+
         <button
-          className="md:hidden focus:outline-none"
+          className="focus:outline-none transition-colors duration-300"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      <div
-        className={`md:hidden absolute w-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-y-0" : "-translate-y-full"
+      {/* Mobile Menu - Separate dropdown with transition */}
+      <div 
+        className={`md:hidden fixed w-full bg-white shadow-lg z-40 transition-all duration-300 ease-in-out transform ${
+          isOpen ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0 pointer-events-none"
         }`}
       >
         <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
@@ -104,6 +124,21 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
+          <div className="pt-4 border-t border-gray-100">
+            <Button 
+              asChild 
+              variant="default" 
+              size="lg" 
+              className="w-full bg-[#7d6aa9] hover:bg-[#5a4b8a] text-white shadow-md"
+            >
+              <a 
+                href="#agendar"
+                onClick={() => setIsOpen(false)}
+              >
+                Agendar Cita
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </nav>

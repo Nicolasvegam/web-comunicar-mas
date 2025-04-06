@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Heart, Star, Book, Users } from "lucide-react";
 
@@ -61,7 +60,7 @@ const ApproachSection = () => {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src="https://images.unsplash.com/photo-1602046819499-700bc65c3281?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+                src="https://plus.unsplash.com/premium_photo-1701984401462-f1c709ce722e?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Niño en terapia"
                 className="rounded-2xl shadow-xl"
               />
