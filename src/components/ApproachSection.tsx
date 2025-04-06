@@ -27,8 +27,8 @@ const values = [
 
 const ApproachSection = () => {
   return (
-    <section id="enfoque" className="bg-brand-50 relative overflow-hidden">
-      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-mintGreen-100 rounded-full blur-3xl opacity-20 transform -translate-x-1/4 translate-y-1/4"></div>
+    <section id="enfoque" className="bg-comunicar-lavender/10 relative overflow-hidden">
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-comunicar-blue/20 rounded-full blur-3xl opacity-20 transform -translate-x-1/4 translate-y-1/4"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="section-title">Un enfoque cálido, integral y basado en evidencia</h2>
@@ -45,7 +45,7 @@ const ApproachSection = () => {
                 
                 return (
                   <div key={index} className="flex gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-brand-500">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-comunicar-lavender">
                       <Icon size={24} />
                     </div>
                     <div>
@@ -66,8 +66,8 @@ const ApproachSection = () => {
                 className="rounded-2xl shadow-xl"
               />
             </div>
-            <div className="absolute -bottom-4 -right-4 w-64 h-64 bg-softYellow-200 rounded-full blur-3xl opacity-20"></div>
-            <div className="absolute -top-4 -left-4 w-64 h-64 bg-brand-200 rounded-full blur-3xl opacity-20"></div>
+            <div className="absolute -bottom-4 -right-4 w-64 h-64 bg-comunicar-yellow/30 rounded-full blur-3xl opacity-20"></div>
+            <div className="absolute -top-4 -left-4 w-64 h-64 bg-comunicar-pink/30 rounded-full blur-3xl opacity-20"></div>
           </div>
         </div>
       </div>

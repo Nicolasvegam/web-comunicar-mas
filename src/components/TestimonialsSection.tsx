@@ -56,8 +56,8 @@ const TestimonialsSection = () => {
   const handleMouseLeave = () => setAutoplay(true);
 
   return (
-    <section id="testimonios" className="bg-mintGreen-50 relative overflow-hidden">
-      <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-softYellow-100 rounded-full blur-3xl opacity-20 transform translate-x-1/4 translate-y-1/4"></div>
+    <section id="testimonios" className="bg-comunicar-blue/10 relative overflow-hidden">
+      <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-comunicar-yellow/20 rounded-full blur-3xl opacity-20 transform translate-x-1/4 translate-y-1/4"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="section-title">Lo que dicen las familias</h2>
@@ -68,7 +68,7 @@ const TestimonialsSection = () => {
           onMouseLeave={handleMouseLeave}
         >
           <div className="relative bg-white rounded-2xl shadow-xl p-8 md:p-12">
-            <div className="absolute -top-6 left-8 text-brand-500">
+            <div className="absolute -top-6 left-8 text-comunicar-lavender">
               <Quote size={48} />
             </div>
             
@@ -81,7 +81,7 @@ const TestimonialsSection = () => {
                 <span className="font-bold text-lg">
                   {testimonials[currentIndex].author}
                 </span>
-                <span className="text-brand-500">
+                <span className="text-comunicar-blue">
                   {testimonials[currentIndex].service}
                 </span>
               </div>
@@ -91,7 +91,7 @@ const TestimonialsSection = () => {
           <div className="flex justify-center mt-8 gap-3">
             <button
               onClick={prevTestimonial}
-              className="p-2 rounded-full bg-white shadow-md hover:bg-brand-50 transition-colors"
+              className="p-2 rounded-full bg-white shadow-md hover:bg-comunicar-lavender/10 transition-colors"
               aria-label="Testimonio anterior"
             >
               <ChevronLeft size={20} />
@@ -104,7 +104,7 @@ const TestimonialsSection = () => {
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-all ${
                     index === currentIndex
-                      ? "bg-brand-500 w-6"
+                      ? "bg-comunicar-lavender w-6"
                       : "bg-gray-300"
                   }`}
                   aria-label={`Ir al testimonio ${index + 1}`}
@@ -114,7 +114,7 @@ const TestimonialsSection = () => {
             
             <button
               onClick={nextTestimonial}
-              className="p-2 rounded-full bg-white shadow-md hover:bg-brand-50 transition-colors"
+              className="p-2 rounded-full bg-white shadow-md hover:bg-comunicar-lavender/10 transition-colors"
               aria-label="Siguiente testimonio"
             >
               <ChevronRight size={20} />

@@ -10,8 +10,8 @@ const specialties = [
     title: "Fonoaudiología",
     description:
       "Desarrollo del lenguaje, habla y deglución. Ayudamos a mejorar la comunicación y expresión de tu hijo.",
-    bgColor: "bg-brand-50",
-    iconColor: "text-brand-500",
+    bgColor: "bg-comunicar-blue/20",
+    iconColor: "text-comunicar-blue",
   },
   {
     id: 2,
@@ -19,8 +19,8 @@ const specialties = [
     title: "Terapia Ocupacional",
     description:
       "Motricidad, integración sensorial y autonomía. Potenciamos las habilidades físicas y la independencia.",
-    bgColor: "bg-mintGreen-50",
-    iconColor: "text-mintGreen-500",
+    bgColor: "bg-comunicar-lavender/20",
+    iconColor: "text-comunicar-lavender",
   },
   {
     id: 3,
@@ -28,8 +28,8 @@ const specialties = [
     title: "Psicología Infantil",
     description:
       "Regulación emocional, conducta y acompañamiento familiar. Cuidamos la salud mental y el desarrollo emocional.",
-    bgColor: "bg-softYellow-50",
-    iconColor: "text-softYellow-500",
+    bgColor: "bg-comunicar-yellow/20",
+    iconColor: "text-comunicar-yellow",
   },
 ];
 
@@ -70,7 +70,7 @@ const SpecialtyCard = ({
 const SpecialtiesSection = () => {
   return (
     <section id="especialidades" className="relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-brand-100 rounded-full blur-3xl opacity-20 transform translate-x-1/4 -translate-y-1/4"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-comunicar-lavender rounded-full blur-3xl opacity-20 transform translate-x-1/4 -translate-y-1/4"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="section-title">Especialidades para cada etapa del desarrollo</h2>

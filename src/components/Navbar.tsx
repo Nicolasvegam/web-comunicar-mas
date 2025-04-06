@@ -44,12 +44,14 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center py-4">
         <a href="#" className="flex items-center space-x-2">
-          <div className="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center text-white font-bold text-xl">
-            SF
-          </div>
-          <span className="text-xl font-display font-semibold">
-            <span className="text-brand-500">Sonrisa</span>{" "}
-            <span className="text-mintGreen-500">Feliz</span>
+          <img 
+            src="/public/lovable-uploads/2867f809-d36c-45f2-9dc2-2e47c39908e4.png" 
+            alt="Comunicar Más Logo" 
+            className="h-12 w-auto"
+          />
+          <span className="text-xl font-display font-semibold md:block hidden">
+            <span className="text-comunicar-lavender">Comunicar</span>{" "}
+            <span className="text-comunicar-blue">Más</span>
           </span>
         </a>
 
@@ -59,7 +61,7 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="font-medium hover:text-brand-500 transition-colors"
+              className="font-medium hover:text-comunicar-lavender transition-colors"
             >
               {link.name}
             </a>
@@ -90,7 +92,7 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="py-2 font-medium hover:text-brand-500 transition-colors"
+              className="py-2 font-medium hover:text-comunicar-lavender transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {link.name}

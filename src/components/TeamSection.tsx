@@ -9,7 +9,7 @@ const teamMembers = [
     experience: "8 años de experiencia",
     specialty: "Especialista en apego y desarrollo emocional temprano.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1288&q=80",
-    bgColor: "bg-softYellow-50",
+    bgColor: "bg-comunicar-yellow/20",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const teamMembers = [
     experience: "10 años de experiencia",
     specialty: "Especialista en trastornos del habla y lenguaje en primera infancia.",
     image: "https://images.unsplash.com/photo-1551836022-aadb801c60ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
-    bgColor: "bg-brand-50",
+    bgColor: "bg-comunicar-blue/20",
   },
   {
     id: 3,
@@ -27,14 +27,14 @@ const teamMembers = [
     experience: "6 años de experiencia",
     specialty: "Especialista en integración sensorial y neurodesarrollo.",
     image: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
-    bgColor: "bg-mintGreen-50",
+    bgColor: "bg-comunicar-lavender/20",
   },
 ];
 
 const TeamSection = () => {
   return (
     <section id="equipo" className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-1/3 h-1/3 bg-mintGreen-100 rounded-full blur-3xl opacity-20 transform -translate-x-1/4 -translate-y-1/4"></div>
+      <div className="absolute top-0 left-0 w-1/3 h-1/3 bg-comunicar-blue/20 rounded-full blur-3xl opacity-20 transform -translate-x-1/4 -translate-y-1/4"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="section-title">Especialistas en el desarrollo infantil</h2>
@@ -57,7 +57,7 @@ const TeamSection = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                <p className="text-brand-600 font-medium">{member.role}</p>
+                <p className="text-comunicar-lavender font-medium">{member.role}</p>
                 <p className="text-sm text-muted-foreground mb-3">{member.experience}</p>
                 <p className="text-muted-foreground">{member.specialty}</p>
               </div>

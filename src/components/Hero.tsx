@@ -9,9 +9,9 @@ const Hero = () => {
       className="min-h-screen flex items-center pt-20 relative overflow-hidden"
     >
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-50/80 to-mintGreen-50/80"></div>
-        <div className="absolute bottom-0 right-0 w-2/3 h-2/3 bg-softYellow-100 rounded-full blur-3xl opacity-20 transform translate-x-1/4 translate-y-1/4"></div>
-        <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-brand-100 rounded-full blur-3xl opacity-20 transform -translate-x-1/4 -translate-y-1/4"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-comunicar-lavender/30 to-comunicar-blue/30"></div>
+        <div className="absolute bottom-0 right-0 w-2/3 h-2/3 bg-comunicar-yellow rounded-full blur-3xl opacity-20 transform translate-x-1/4 translate-y-1/4"></div>
+        <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-comunicar-pink rounded-full blur-3xl opacity-20 transform -translate-x-1/4 -translate-y-1/4"></div>
       </div>
 
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center relative z-10">
@@ -32,7 +32,7 @@ const Hero = () => {
             </a>
             <a
               href="#especialidades"
-              className="flex items-center gap-2 font-medium hover:text-brand-500 transition-colors mt-4 sm:mt-0"
+              className="flex items-center gap-2 font-medium hover:text-comunicar-lavender transition-colors mt-4 sm:mt-0"
             >
               Conoce más
               <ArrowDown size={18} />
@@ -47,13 +47,13 @@ const Hero = () => {
               className="rounded-2xl shadow-xl object-cover h-[500px]"
             />
           </div>
-          <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-softYellow-200 rounded-full blur-3xl opacity-20"></div>
-          <div className="absolute -top-10 -right-10 w-64 h-64 bg-mintGreen-200 rounded-full blur-3xl opacity-20"></div>
+          <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-comunicar-yellow rounded-full blur-3xl opacity-20"></div>
+          <div className="absolute -top-10 -right-10 w-64 h-64 bg-comunicar-blue rounded-full blur-3xl opacity-20"></div>
         </div>
       </div>
 
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#especialidades" className="text-brand-500">
+        <a href="#especialidades" className="text-comunicar-lavender">
           <ArrowDown size={24} />
         </a>
       </div>

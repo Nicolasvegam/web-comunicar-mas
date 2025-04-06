@@ -42,8 +42,8 @@ const faqs = [
 
 const FaqSection = () => {
   return (
-    <section id="faq" className="bg-brand-50 relative overflow-hidden">
-      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-softYellow-100 rounded-full blur-3xl opacity-20 transform -translate-x-1/4 translate-y-1/4"></div>
+    <section id="faq" className="bg-comunicar-lavender/10 relative overflow-hidden">
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-comunicar-pink/20 rounded-full blur-3xl opacity-20 transform -translate-x-1/4 translate-y-1/4"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="section-title">Preguntas frecuentes</h2>
@@ -52,7 +52,7 @@ const FaqSection = () => {
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-200">
-                <AccordionTrigger className="text-left py-4 hover:text-brand-500 font-medium text-lg">
+                <AccordionTrigger className="text-left py-4 hover:text-comunicar-lavender font-medium text-lg">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-4">
