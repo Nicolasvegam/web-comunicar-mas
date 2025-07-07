@@ -124,7 +124,7 @@ const ContactSection = () => {
                 </ContactItem>
                 
                 <ContactItem icon={Mail} title="Email">
-                  <p>contacto@tusonrisa.cl</p>
+                  <p>comunicarmascl@gmail.com</p>
                 </ContactItem>
               </div>
             </div>
